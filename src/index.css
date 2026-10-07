@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+/* Barlow is bundled with the project so the chosen typeface does not rely on a font CDN. */
+@font-face { font-family: Barlow; src: url('./assets/fonts/Barlow-Regular.ttf') format('truetype'); font-weight: 400; font-display: swap; }
+@font-face { font-family: Barlow; src: url('./assets/fonts/Barlow-Medium.ttf') format('truetype'); font-weight: 500; font-display: swap; }
+@font-face { font-family: Barlow; src: url('./assets/fonts/Barlow-SemiBold.ttf') format('truetype'); font-weight: 600; font-display: swap; }
+@font-face { font-family: Barlow; src: url('./assets/fonts/Barlow-Bold.ttf') format('truetype'); font-weight: 700; font-display: swap; }
+
+:root { font-family: Barlow, sans-serif; color: #17221d; background: #f6f8f7; font-synthesis: none; text-rendering: optimizeLegibility; }
+html { scroll-behavior: smooth; }
+body { min-width: 320px; margin: 0; }
+button, input { font: inherit; }
+button { cursor: pointer; }
+::selection { background: #c7f2d7; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; } }

@@ -1,0 +1,6 @@
+import { Banknote, Boxes, CalendarDays, Car, ChevronRight, Fuel, Headphones, HeartPulse, Receipt, Wallet } from 'lucide-react';
+
+const services = [[Headphones, 'IT helpdesk'], [Banknote, 'Funds request'], [CalendarDays, 'eLeave'], [Wallet, 'Imprest'], [Boxes, 'Stores / supply'], [Car, 'Vehicle request'], [HeartPulse, 'Medicals'], [Fuel, 'Fuel coupon'], [Receipt, 'Reimburse']];
+export default function Services({ onAction }) {
+  return <main className="mx-auto max-w-[1200px] px-4 py-10 sm:px-6"><section className="panel"><p className="text-xs font-bold uppercase tracking-widest text-[#087342]">Staff services</p><h1 className="mt-2 text-3xl font-bold text-slate-900">Services & requests</h1><p className="mt-3 text-slate-600">Choose a service to start a request. Production links can be connected to the corresponding NITA systems.</p><div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">{services.map(([Icon, item]) => <button key={item} onClick={() => onAction(`Connect ${item} to the relevant NITA service.`)} className="service-card"><span className="service-icon"><Icon size={19} strokeWidth={1.9} aria-hidden="true" /></span><span className="service-name">{item}</span><span className="service-desc inline-flex items-center gap-1">Open service <ChevronRight size={13} aria-hidden="true" /></span></button>)}</div></section></main>;
+}
